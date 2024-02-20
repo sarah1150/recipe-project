@@ -1,0 +1,44 @@
+<section class="recipe-details">
+  <div class="container d-flex flex-wrap">
+    <div class="card mt-3 mb-3" style="max-width: 100%">
+      <div class="row g-0">
+        <div class="col-md-6 col-sm-12">
+          <img
+            [src]="recipeDetails?.image"
+            class="img-fit rounded-start"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-6 col-sm-12 mr-1">
+          <div class="card-body">
+            <h5 class="card-title title-xs font-dance">
+              {{ recipeDetails.title }}
+            </h5>
+            <p class="card-text description-sm">
+              <span class="clr-main">${{ recipeDetails.pricePerServing }}</span>
+              /per serving
+            </p>
+            <p
+              class="card-text description-sm"
+              [innerHTML]="recipeDetails.summary"
+            ></p>
+            <p class="font-dance title-body">Ingredients</p>
+            <div class="d-flex flex-wrap title-body">
+              <div
+                class="ingred-box col-3 bg-main clr-white text-center pt-1 px-1 m-3 description-sm"
+                *ngFor="let ingred of ingredients"
+              >
+                <span> {{ ingred.name }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="font-dance fw-bold pt-1 px-2 title-body">Instructions</p>
+      <div
+        class="description-sm"
+        [innerHTML]="recipeDetails.instructions"
+      ></div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,124 @@
+/*** Color Pallete ***/
+$mainColor: #ff4500;
+$black: #000002;
+$white: #ffffff;
+// $gray-1:#0000000F;
+// $gray-4:#3B3B3B;
+$gray_1: #737373; // 1
+$gray_2: #b4b4b4; // 2
+$gray_3: #cbcbcb; // 3
+$gray_10: #f6f6f6;
+$gray_4: #e9e9e9; // 4
+$gray_5: #f1f1f1; // 5
+$gray_6: #f6f8ff; // 6
+$gray_7: #f9f9f9; // 7
+$gray_8: #fdfdff; // 8
+$gray_9: #fff3f3; // 9
+
+$blue: #243271;
+$blue_light: #02bac6;
+$red: #fd4646;
+$green: #34c759;
+$yellow: #ffb300;
+$yellow_1: #fff9ec;
+$gradient: transparent
+  linear-gradient(95deg, #02bac6 0%, #4964e5 50%, #243271 100%) 0% 0% no-repeat
+  padding-box;
+// $gradient: transparent linear-gradient(139deg, #4964E5 0%, #243271 100%) 0% 0% no-repeat padding-box;
+/*** Transition ***/
+$transitionFast: all 0.3s ease-in-out;
+$transitionSlow: all 0.6s ease-in-out;
+
+/*** Font Family ***/
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
+$bodyFont: "Raleway", sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+$danceFont: "Dancing Script", cursive;
+
+// mixin Breakpoints
+@mixin breakpoints($point) {
+  @if ($point==desktop) {
+    @media (min-width: 1600px) {
+      @content;
+    }
+  } @else if ($point==large) {
+    @media (min-width: 1200px) and (max-width: 1599.98px) {
+      @content;
+    }
+  } @else if ($point==medium) {
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      @content;
+    }
+  } @else if ($point==small) {
+    @media (min-width: 576px) and (max-width: 991.98px) {
+      @content;
+    }
+  } @else if ($point==mobile) {
+    @media (max-width: 575.98px) {
+      @content;
+    }
+  }
+}
+
+// mixin Breakpoints Minimum Width
+@mixin breakpointsMinWidth($pointMinWidth) {
+  @if ($pointMinWidth==desktop) {
+    @media (min-width: 1600px) {
+      @content;
+    }
+  } @else if ($pointMinWidth==large) {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if ($pointMinWidth==medium) {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if ($pointMinWidth==small) {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if ($pointMinWidth==mobile) {
+    @media (min-width: 576px) {
+      @content;
+    }
+  }
+}
+
+// mixin Breakpoints Maximum Width
+@mixin breakpointsMaxWidth($pointMaxWidth) {
+  @if ($pointMaxWidth==desktop) {
+    @media (max-width: 1599.98px) {
+      @content;
+    }
+  } @else if ($pointMaxWidth==large) {
+    @media (max-width: 1199.98px) {
+      @content;
+    }
+  } @else if ($pointMaxWidth==medium) {
+    @media (max-width: 991.98px) {
+      @content;
+    }
+  } @else if ($pointMaxWidth==small) {
+    @media (max-width: 767.98px) {
+      @content;
+    }
+  } @else if ($pointMaxWidth==mobile) {
+    @media (max-width: 575.98px) {
+      @content;
+    }
+  }
+}
+
+/*** Use Mixin breakpoints
+  @include breakpoints(desktop) {}
+
+  @include breakpoints(large) {}
+
+  @include breakpoints(medium) {}
+
+  @include breakpoints(small) {}
+
+  @include breakpoints(mobile) {}
+***/

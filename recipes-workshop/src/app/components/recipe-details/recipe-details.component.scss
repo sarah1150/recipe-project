@@ -1,0 +1,23 @@
+@import "src/assets/styles/variables";
+.recipe-details {
+  .container {
+    .card {
+      border: none;
+      .img-fit {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      .font-dance {
+        font-family: $danceFont;
+      }
+      .ingred-box {
+        max-height: 9vh;
+        min-height: 5vh;
+        max-width: 150px;
+        min-width: 100px;
+        border-radius: 10px;
+      }
+    }
+  }
+}

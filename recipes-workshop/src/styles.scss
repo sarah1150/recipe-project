@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "src/assets/styles/variables";
+@import "src/assets/styles/custom";
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: $bodyFont;
+  font-weight: 400;
+}
+
+nav {
+  font-family: $danceFont;
+  font-weight: 400;
+}
+
+*::-webkit-scrollbar {
+  width: 0px !important;
+  background-color: white !important;
+}
+
+*::-webkit-scrollbar-thumb {
+  width: 0px !important;
+  background-color: whitesmoke !important;
+  border-radius: 0px !important;
+}
+
+*::-webkit-scrollbar:horizontal {
+  width: 0px !important;
+  background-color: white !important;
+}
+
+*::-webkit-scrollbar-thumb:horizontal {
+  width: 0px !important;
+  background-color: whitesmoke !important;
+  border-radius: 0px;
+}

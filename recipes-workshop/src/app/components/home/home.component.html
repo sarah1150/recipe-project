@@ -1,0 +1,36 @@
+<section class="home">
+  <div class="container mt-5 text-center" *ngIf="recipesList.length==0">
+    <h4 class="pt-5 clr-gray_2 font-bold title-xs">No Recipes Yet !</h4>
+   </div>
+  <div class="container d-flex flex-wrap justify-content-center" *ngIf="recipesList.length!=0">
+    <div
+      class="card mt-3 mx-4 col-md-4 col-sm-12 "
+      style="width: 18rem"
+      *ngFor="let item of recipesList| paginate: { itemsPerPage: 6, currentPage: p }; let i = index"
+    >
+    <div class="heart-holder text-center">
+    <img src="../../../assets/img/empty_heart.svg" *ngIf="item.emptyHeart" (click)="switchToFullHeart(i)" class="heart-img pt-2" alt="emp-heart">
+    <img src="../../../assets/img/full_heart.svg" *ngIf="!item.emptyHeart" (click)="switchToEmptyHeart(i)" class="heart-img pt-2" alt="full-heart">
+  </div>
+      <img [src]="item?.image" class="card-img-top" alt="Recipe_Image" />
+      <div class="card-body" [routerLink]="['../recipe_details/' + item.id]">
+        <h5 class="card-title clr-main description-md">{{ item.title }}</h5>
+        <p class="card-text description-xs" [innerHTML]="item.summary|slice:0:200"></p>
+        <hr /> 
+        <div class="col-8 d-flex justify-content-between clr-main align-items-center">
+          <div class="d-flex justify-content-between align-items-center">
+            <img src="../../../assets/img/clock.svg" alt="clock">
+            <p class="px-1 my-0">{{ item.readyInMinutes }} mins</p>
+          </div>
+          <div class="d-flex justify-content-between align-items-center">
+            <img src="../../../assets/img/like.svg" alt="like">
+            <p class="px-1 my-0">{{ item.healthScore }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Start Pagination -->
+  <pagination-controls class="p-5" *ngIf="!hidePagination"  (pageChange)="p = $event"></pagination-controls>
+  <!-- End Pagination -->
+</section>

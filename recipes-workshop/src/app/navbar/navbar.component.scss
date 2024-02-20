@@ -1,0 +1,92 @@
+@import "src/assets/styles/variables";
+
+.navbar {
+  box-shadow: 0px 0px 5px #0000000d;
+  background-color: $white;
+  .container {
+    height: 10vh;
+    @include breakpointsMinWidth(mobile) {
+      height: 15vh;
+      }
+      @include breakpointsMaxWidth(small) {
+        height: 15vh;
+      }
+    .nav-tabs {
+      .nav-link {
+        color: $black;
+        opacity: 0.7;
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: 1.5rem;
+        font-weight: bold;
+        background-color: transparent;
+        border: none;
+        transition: transform 0.2s ease-in-out;
+        position: relative;
+
+        &.active {
+          opacity: 1;
+          color: $mainColor;
+          border-bottom: 2px solid $mainColor;
+          transform: scale(1.05);
+          font-weight: bold;
+        }
+      }
+    }
+
+    .search-label {
+      width: 20vw;
+      @include breakpointsMinWidth(mobile) {
+        width: 38vw;
+        }
+        @include breakpointsMaxWidth(medium) {
+          width: 38vw;
+        }
+      .search-icon {
+        position: absolute;
+        left: 8px;
+        @include breakpointsMinWidth(mobile) {
+          top:3px;
+          left: 5px;
+          }
+          @include breakpointsMaxWidth(medium) {
+            top:3px;
+            left: 5px;
+          }
+        z-index: 20;
+      }
+
+      .search-input {
+        border-radius: 15px;
+        padding-left: 30px;
+        @include breakpointsMinWidth(mobile) {
+          padding-left: 22px;
+          }
+          @include breakpointsMaxWidth(medium) {
+            padding-left: 22px;
+          }
+        &:hover,
+        &:focus {
+          box-shadow: 0px 0px 5px $mainColor;
+          opacity: 0.7;
+        }
+      }
+
+      .search-btn {
+        width: 25%;
+        height: 100%;
+        right: 1px;
+        position: absolute;
+        background-color: $gray_1;
+        border: none;
+        border-radius: 15px;
+        @include breakpointsMinWidth(mobile) {
+          width: 35%;
+          }
+          @include breakpointsMaxWidth(medium) {
+            width: 35%;
+          }
+      }
+    }
+  }
+}

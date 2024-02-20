@@ -1,0 +1,429 @@
+@import "src/assets/styles/variables";
+
+// section spacing
+.py-section {
+  padding-top: 90px;
+  padding-bottom: 90px;
+
+  @media (max-width: 991.98px) {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+}
+
+.pt-section {
+  padding-top: 110px;
+
+  @media (max-width: 991.98px) {
+    padding-top: 35px;
+  }
+}
+
+.pb-section {
+  padding-bottom: 90px;
+
+  @media (max-width: 991.98px) {
+    padding-bottom: 35px;
+  }
+}
+
+.my-section {
+  margin-top: 90px;
+  margin-bottom: 90px;
+
+  @media (max-width: 991.98px) {
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+}
+
+.container_layout {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 95%;
+
+  @media (max-width: 767.98px) {
+    width: 100%;
+  }
+}
+
+// img Fit
+
+.img-fit {
+  height: 30%;
+  width: 30%;
+  object-fit: cover;
+  // object-position: center;
+  @include breakpointsMinWidth(mobile) {
+    height: 35%;
+  width: 35%;
+    }
+    @include breakpointsMaxWidth(small) {
+      height: 30%;
+  width: 30%;
+    }
+  &.contain {
+    object-fit: contain;
+  }
+}
+
+// Titles
+.title-xl {
+  @include breakpoints(desktop) {
+    font-size: 120px;
+  }
+
+  @include breakpoints(large) {
+    font-size: 100px;
+  }
+
+  @include breakpoints(medium) {
+    font-size: 85px;
+  }
+
+  @include breakpoints(small) {
+    font-size: 70px;
+  }
+
+  @include breakpoints(mobile) {
+    font-size: 35px;
+  }
+}
+
+.title-lg {
+  @include breakpoints(desktop) {
+    font-size: 52px;
+  }
+
+  @include breakpoints(large) {
+    font-size: 40px;
+  }
+
+  @include breakpoints(medium) {
+    font-size: 32px;
+  }
+
+  @include breakpoints(small) {
+    font-size: 24px;
+  }
+
+  @include breakpoints(mobile) {
+    font-size: 18px;
+  }
+}
+
+.title-md {
+  @include breakpoints(desktop) {
+    font-size: 42px;
+  }
+
+  @include breakpoints(large) {
+    font-size: 32px;
+  }
+
+  @include breakpoints(medium) {
+    font-size: 26px;
+  }
+
+  @include breakpoints(small) {
+    font-size: 22px;
+  }
+
+  @include breakpoints(mobile) {
+    font-size: 20px;
+  }
+}
+
+.title-sm {
+  @include breakpoints(desktop) {
+    font-size: 28px;
+  }
+
+  @include breakpoints(large) {
+    font-size: 24px;
+  }
+
+  @include breakpoints(medium) {
+    font-size: 20px;
+  }
+
+  @include breakpoints(small) {
+    font-size: 18px;
+  }
+
+  @include breakpoints(mobile) {
+    font-size: 16px;
+  }
+}
+
+.title-xs {
+  @include breakpoints(desktop) {
+    font-size: 24px;
+  }
+
+  @include breakpoints(large) {
+    font-size: 22px;
+  }
+
+  @include breakpoints(medium) {
+    font-size: 18px;
+  }
+
+  @include breakpoints(small) {
+    font-size: 14px;
+  }
+
+  @include breakpoints(mobile) {
+    font-size: 12px;
+  }
+}
+
+.title-body {
+  @include breakpoints(desktop) {
+    font-size: 20px;
+  }
+
+  @include breakpoints(large) {
+    font-size: 18px;
+  }
+
+  @include breakpoints(medium) {
+    font-size: 14px;
+  }
+
+  @include breakpoints(small) {
+    font-size: 13px;
+  }
+
+  @include breakpoints(mobile) {
+    font-size: 12px;
+  }
+}
+
+.description-sm {
+  font-size: 14px;
+  @include breakpoints(desktop) {
+    font-size: 14px;
+  }
+
+  @include breakpoints(large) {
+    font-size: 14px;
+  }
+
+  @include breakpoints(medium) {
+    font-size: 12px;
+  }
+
+  @include breakpoints(small) {
+    font-size: 12px;
+  }
+
+  @include breakpoints(mobile) {
+    font-size: 12px;
+  }
+}
+
+.description-md {
+  font-size: 14px;
+  // @include breakpoints(desktop) {
+  //   font-size: 18px;
+  // }
+
+  // @include breakpoints(large) {
+  //   font-size: 16px;
+  // }
+
+  // @include breakpoints(medium) {
+  //   font-size: 14px;
+  // }
+
+  // @include breakpoints(small) {
+  //   font-size: 14px;
+  // }
+
+  // @include breakpoints(mobile) {
+  //   font-size: 13px;
+  // }
+}
+.btn-text {
+  font-weight: 600;
+  @include breakpoints(desktop) {
+    font-size: 14px;
+  }
+
+  @include breakpoints(large) {
+    font-size: 14px;
+  }
+
+  @include breakpoints(medium) {
+    font-size: 14px;
+  }
+
+  @include breakpoints(small) {
+    font-size: 12px;
+  }
+
+  @include breakpoints(mobile) {
+    font-size: 12px;
+  }
+}
+
+// colors
+.clr-gray_1 {
+  color: $gray_1;
+}
+.clr-gray_2 {
+  color: $gray_2;
+}
+.clr-gray_3 {
+  color: $gray_3;
+}
+.clr-white {
+  color: $white;
+}
+.clr-black {
+  color: $black;
+}
+.clr-main {
+  color: $mainColor;
+}
+.clr-red {
+  color: $red;
+}
+.clr-blue {
+  color: $blue;
+}
+
+.clr-blue_light {
+  color: $blue_light;
+}
+
+.clr-gray_5 {
+  color: $gray_5;
+}
+
+.clr-yellow {
+  color: $yellow;
+}
+
+.clr-green {
+  color: $green;
+}
+
+// backgrounds
+.bg-gray_5 {
+  background-color: $gray_5;
+}
+
+.bg-yellow {
+  background-color: $yellow;
+}
+
+.bg-main {
+  background-color: $mainColor;
+}
+.bg-red {
+  background-color: $red;
+}
+
+.bg-blue_light {
+  background-color: $blue_light;
+}
+
+.input-desc {
+  color: $gray_1;
+  font-size: 14px;
+  text-align: center;
+}
+.description-xs {
+  // @include breakpointsMinWidth(desktop) {
+  //   font-size: 14px;
+  // }
+  font-size: 10px;
+}
+
+// .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+//   line-height: 1.5;
+// }
+/*** font weight ***/
+.font-normal {
+  font-weight: normal;
+}
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semiBold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-exBold {
+  font-weight: 800;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
+/*** Color ***/
+.color-main {
+  color: $mainColor;
+}
+
+// error
+.error {
+  color: $red;
+  font-size: 12px;
+  font-weight: 600;
+  // position: absolute;
+  // // bottom: -19px;
+  // left: 3px;
+}
+.btn-disable {
+  color: $white;
+  opacity: 0.5;
+  pointer-events: none;
+  background-color: $gray_7;
+}
+.disable-link {
+  color: $mainColor;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.spinner-border {
+  width: 20px;
+  height: 20px;
+}
+.clr-gray_3 {
+  color: $gray_3;
+}
+
+.shape-top,
+.shape-bottom {
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    pointer-events: none;
+  }
+}
+
+.hidePagination {
+  opacity: 0;
+  pointer-events: none;
+}
+
+// font size 10px
+
+.font_10 {
+  font-size: 10px;
+}

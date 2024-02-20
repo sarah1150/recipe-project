@@ -1,0 +1,67 @@
+<nav class="navbar mx-0 fixed-top title-body">
+  <div class="container mx-0 d-flex justify-content-between align-items-center">
+    <a class="col-md-4 col-sm-12"  routerLink="/home">
+      <img class="img-fit" src="assets/img/LOGO_PSD.jpg" alt="manage-logo" />
+    </a>
+    <div class="col-md-4 col-sm-6">
+    <ul
+      class="text-center nav nav-tabs"
+      id="myTab"
+      role="tablist"
+    >
+      <li class="nav-item" role="Recipes">
+        <button
+          [ngClass]="{ 'active': activeTab == 'home' }"
+          class="nav-link"
+          routerLink="/home"
+          (click)="switchTab('home')"
+          id="Recipes-btn"
+          data-bs-toggle="tab"
+          data-bs-target="#Recipes-tab"
+          type="button"
+          role="tab"
+          aria-controls="Recipes-tab"
+          
+        >
+          Recipes
+        </button>
+      </li>
+      <li class="nav-item" role="Favourites">
+        <button
+          [ngClass]="{ 'active': activeTab == 'favourites' }"
+          class="nav-link"
+          routerLink="/favourites"
+          (click)="switchTab('favourites')"
+          id="Favourites-btn"
+          data-bs-toggle="tab"
+          data-bs-target="#Favourites-tab"
+          type="button"
+          role="tab"
+          aria-controls="Favourites-tab"
+         
+        >
+          Favourites
+        </button>
+      </li>
+    </ul>
+  </div>
+    <div class="col-md-3 col-md-1-offset col-sm-6 buttons" *ngIf="!hideSearch">
+      <div class="search-bar d-flex justify-content-end">
+        <label class="search-label description-sm">
+          <div class="position-relative w-100 h-100">
+            <div class="search-icon">
+              <img src="../../../assets/img/search.svg" alt="search" />
+            </div>
+            <input
+              nz-input
+              [(ngModel)]="inputValue"
+              placeholder="Search..."
+              class="search-input h-100"
+            />
+            <button class="search-btn clr-white" (click)="onTyping()">Search</button>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+</nav>
